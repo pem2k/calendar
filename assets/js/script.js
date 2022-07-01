@@ -4,7 +4,7 @@ var i=0;
 var txtArea = $("textarea")
 var txtAreaCstm = $(["data-time"]).val(i)
 var calendar= {
-    "0": undefined,
+    "0":undefined,
     "1":undefined,
     "2":undefined,
     "3":undefined,
