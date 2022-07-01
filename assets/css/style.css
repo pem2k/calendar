@@ -4,6 +4,9 @@ body {
   line-height: 1;
 }
 
+main{
+  width: 90vw;
+  margin: 0 auto 0 auto}
 textarea{
   background: transparent;
   border: none;
@@ -69,3 +72,10 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+
+
+span{
+  text-align: center;
+}
+
