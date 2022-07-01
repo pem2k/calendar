@@ -51,7 +51,9 @@ setInterval(function(){
 
         localStorage.setItem(JSON.stringify(calendar));
 
-        txtArea.val("")
+        for(i=0; i< 10; i++){
+        txtAreaCstm.text("")
+        }
 
         var displayCal = localStorage.getItem(JSON.parse(calendar));
 
