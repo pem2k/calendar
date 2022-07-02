@@ -1,19 +1,19 @@
 
 var saveBtn = $("button")
-var i=0;
 var txtArea = $("textarea")
-var txtAreaCstm = $(["data-time"]).val(i)
+i=0
+var txtAreaCstm = $(`[data-time = "${i}"]`)
 var calendar= {
-    "0":undefined,
-    "1":undefined,
-    "2":undefined,
-    "3":undefined,
-    "4":undefined,
-    "5":undefined,
-    "6":undefined,
-    "7":undefined,
-    "8":undefined,
-    "9":undefined
+    "0" : "",
+    "1" : "",
+    "2" : "",
+    "3" : "",
+    "4" : "",
+    "5" : "",
+    "6" : "",
+    "7" : "",
+    "8" : "",
+    "9" : ""
 }
 
 //clock on page load
@@ -45,21 +45,23 @@ setInterval(function(){
 
         for(i=0; i< 10; i++){
             var strI = i.toString()
-            calendar.strI =  txtAreaCstm.text()
+            console.log(strI)
+            calendar.strI =  txtAreaCstm.val()
             console.log(calendar.strI)
         };
 
-        localStorage.setItem(JSON.stringify(calendar));
+        localStorage.setItem("calendar", JSON.stringify(calendar));
 
         for(i=0; i< 10; i++){
+        var strI = i.toString()
         txtAreaCstm.text("")
         }
 
-        var displayCal = localStorage.getItem(JSON.parse(calendar));
+        var displayCal = localStorage.getItem(JSON.parse("calendar"));
 
         for(i=0; i<10; i++){
             var strI = i.toString()
-            textAreaCstm.text(displayCal.strI)
+            textAreaCstm.val(displayCal.strI)
     }
 });
 
