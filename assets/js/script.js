@@ -45,22 +45,18 @@ initDisplay()
 //conditional styling loop based on current time
 function colorize() {
     
+    var comTime = parseInt(moment().format("H"))
     
-    var comTime = moment().format("H")
 
-    for (i = 0; i < 10; i++) {
-        var cstmObjVal = parseInt(sel[i].attributes[1].nodeValue)
+    for (i = 8; i < 18; i++) {
+        var cstmObjVal = parseInt(sel[i-8].attributes[1].nodeValue)
         
-        console.log($(`[data-time = ${i}]`))
-        console.log(cstmObjVal)
-        var txtAreaArray = Object.entries(txtArea)
-        console.log(txtAreaArray[i])
         if (cstmObjVal > comTime) {
-            txtAreaArray[i].addClass("future")
+            $(`[data-num=${i}]`).addClass("future")
         } else if (cstmObjVal < comTime){
-            txtAreaArray[i].replace("textarea.form-control.present");
+            $(`[data-num=${i}]`).addClass("past");
         } else if (cstmObjVal == comTime){
-            txtAreaArray[i].replace("textarea.form-control.present");
+            $(`[data-num=${i}]`).addClass("present");
         };
     }
 }
