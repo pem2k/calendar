@@ -44,11 +44,10 @@ function initDisplay() {
 };
 initDisplay();
 
-//conditional styling loop based on current time
+//conditional styling based on current time
 function colorize() {
     //gets current time and turns it into an integer for comparison
     var comTime = parseInt(moment().format("H"));
-
 
     for (i = 8; i < 18; i++) {
         //selects value of data-num at text area, 
@@ -81,7 +80,7 @@ saveBtn.click(function (event) {
         localStorage.setItem("calendar", JSON.stringify(editedCal));
     };
 
-    //clears text area to prevent doubled display of text
+    //clears text areas to prevent doubled display of text when pulled from local storage
     for (i = 0; i < 10; i++) {
         $(`[data-time = ${i}]`).text("");
     }
