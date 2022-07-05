@@ -1,4 +1,4 @@
-# Work Day Scheduler Starter Code
+# Calendar
 ## Description
 
 I built this project as an excercise in jquery and object manipulation. I learned a bit too late that I should not have used strings of integers as object keys. As such I ended up pulling those objects out to arrays before making any changes to the data.
@@ -11,13 +11,9 @@ I also had to dig further with jquery selectors than I expected, hence selectors
 
 Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
     Deployed Application: http://pem2k.github.io/calendar
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+    ![Work Day Calendar Screenshot](https://github.com/pem2k/calendar/blob/main/assets/images/screenshot.png?raw=true)
 
 ## Credits
 
